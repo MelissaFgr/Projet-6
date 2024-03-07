@@ -1,0 +1,71 @@
+@import '../styles/style.scss';
+
+.errorPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	gap: 5rem;
+	margin: 5rem 2rem;
+
+	color: $kasa-pink;
+	text-align: center;
+
+	&_title {
+		font-size: 288px;
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	&_infos {
+		font-size: 36px;
+		font-weight: 500;
+
+		margin: auto 3rem;
+	}
+
+	&_redirection {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		text-decoration: underline;
+
+		margin-top: 5rem;
+
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.errorPage {
+		&_title {
+			font-size: 144px;
+		}
+
+		&_infos {
+			font-size: 24px;
+		}
+
+		&_redirection {
+			font-size: 16px;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.errorPage {
+
+			&_title {
+				font-size: 96px;
+			}
+
+			&_infos {
+				font-size: 18px;
+			}
+
+			&_redirection {
+				font-size: 12px;
+			}
+		}
+	}
+}

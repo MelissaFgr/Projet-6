@@ -1,0 +1,68 @@
+@import '../../styles/style.scss';
+
+.collapse {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&_title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10px;
+		padding: 10px 20px 10px 15px;
+		border-radius: 5px;
+		width: 100%;
+		background: $kasa-pink;
+		color: $white;
+		z-index: 2;
+	}
+
+	&_image {
+		cursor: pointer;
+		width: 32px;
+		height: 32px;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&_content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		visibility: hidden;
+		height: 0;
+		opacity: 0;
+		background: $background-grey;
+		padding: 10px 20px 10px 15px;
+		color: $kasa-pink;
+		transform: translateY(-10px);
+		transition: transform 0.3s ease-in-out, visibility 0s 0.3s, height 0s 0.3s, opacity 0.3s ease-in-out;
+	}
+
+	&.visible > &_content {
+		visibility: visible;
+		height: auto;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	&.visible > &_title > .collapse_image {
+		transform: rotate(-180deg);
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.collapse_title {
+		font-size: 13px;
+	}
+
+	.collapse_image {
+		width: 16px;
+		height: 16px;
+	}
+
+	.collapse_content {
+		font-size: 13px;
+	}
+}

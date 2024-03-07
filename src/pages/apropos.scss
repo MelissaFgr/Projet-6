@@ -1,0 +1,16 @@
+@import '../styles/style.scss';
+
+.collapse {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 15px auto;
+	align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+	.collapse {
+		padding: 1rem;
+		width: 100%;
+	}
+}

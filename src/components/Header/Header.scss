@@ -1,0 +1,47 @@
+@import '../../styles/style.scss';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 50px;
+
+	&_nav {
+		display: flex;
+		align-items: center;
+
+		color: black;
+		gap: 2rem;
+		font-size: 24px;
+		font-style: normal;
+
+		& .active-link {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.header {
+		&_nav {
+			font-size: 1rem;
+			gap: 1rem;
+		}
+
+		&_logo {
+			height: 45px;
+		}
+	}
+}
+
+@media screen and (max-width:550px) {
+	.header {
+		margin: 0 1rem;
+
+		&_nav {
+			margin: 1.5rem 0;
+		}
+	}
+
+}

@@ -1,0 +1,57 @@
+@import '../../styles/style.scss';
+
+.banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+	border-radius: 25px;
+	margin: 3rem;
+
+	color: $white;
+	font-size: 48px;
+	font-weight: 400;
+
+	&_title {
+		@extend .banner; //Utilisation du extend pour éviter les répétitions de selecteurs
+		z-index: 2;
+		margin: 5rem 2rem;
+	}
+
+	&_image_div,
+	&_image {
+		position: absolute;
+		border-radius: 25px;
+		height: 100%;
+		width: 100%;
+	}
+
+	&_image {
+		object-fit: cover;
+	}
+
+	&_image_div {
+		z-index: 1;
+		background: rgba(0, 0, 0, 0.6);
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.banner_title {
+		text-align: left;
+		font-size: 1.5rem;
+		margin: 3rem 2rem 3rem 1rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.banner {
+		margin: 1rem auto;
+		width: 90%;
+		height: 111px;
+		align-items: center;
+		justify-content: center;
+	}
+}

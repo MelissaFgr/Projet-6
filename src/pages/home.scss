@@ -1,0 +1,29 @@
+@import '../styles/style.scss';
+
+.gallery_logement {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 50px;
+  margin: 1rem 3rem;
+  border-radius: 25px;
+  background: $background-grey;
+  height: auto;
+}
+
+@media screen and (max-width: 1230px) {
+	.gallery_logement {
+		gap: 25px;
+		padding: 25px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.gallery_logement {
+		margin: auto;
+		padding: 20px;
+		background: $white;
+	}
+}
