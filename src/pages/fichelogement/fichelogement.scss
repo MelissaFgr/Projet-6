@@ -1,0 +1,172 @@
+@import '../../styles/style.scss';
+
+.carrousel-container {
+  position: relative;
+  height: 415px;
+  margin: 1rem 3rem;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+
+  &_logement {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &_title,
+    &_location {
+      color: $kasa-pink;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+
+    &_title {
+      font-size: 36px;
+    }
+
+    &_location {
+      font-size: 18px;
+    }
+
+    &_tags {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .tag {
+        display: flex;
+        background: $kasa-pink;
+        color: $white;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        border-radius: 10px;
+        padding: 1px 15px;
+      }
+    }
+  }
+
+  &_hostrating {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+
+    &_host {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+
+      &_name {
+        display: flex;
+        flex-direction: column;
+        color: $kasa-pink;
+        text-align: right;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      &_picture {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.rating_stars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.logement-collapse-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 1rem 3rem;
+}
+
+@media screen and (max-width: 900px) {
+	.infos {
+		display: flex;
+		flex-direction: column;
+		margin: 1rem 3rem;
+	}
+
+	.infos_hostrating {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		gap: 1rem;
+		margin: 1rem 1rem;
+	}
+}
+
+
+@media screen and (max-width: 750px) {
+	.logement-collapse-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+		margin: 1rem 3rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.carrousel-container {
+		height: 255px;
+		margin: 0 1rem;
+	}
+
+	.infos {
+		margin: 1rem 1rem;
+
+		&_logement {
+			&_title {
+				font-size: 24px;
+			}
+
+			&_location {
+				font-size: 12px;
+			}
+
+			&_tags {
+				& .tag {
+					font-size: 12px;
+				}
+			}
+		}
+
+		&_hostrating {
+			margin: 0rem 1rem;
+			&_host {
+				&_name {
+					font-size: 12px;
+				}
+
+				&_picture {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+	}
+
+	.logement-collapse-container {
+		margin: 1rem 1rem;
+	}
+
+}
